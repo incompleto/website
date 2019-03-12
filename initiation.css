@@ -7,7 +7,9 @@ body {
   margin: 0;
 }
 .center {
+  display: flex;
   align-self: center;
+  align-items: center;
   flex-direction: column;
 }
 .info {
@@ -282,6 +284,8 @@ input[type=submit] + input[type=submit] {
 }
 
 .textbox {
+  align-self: center;
+  flex-direction: column;
   width: 100%;
   height: 90%;
   overflow: scroll;
@@ -289,6 +293,8 @@ input[type=submit] + input[type=submit] {
   border: 2px solid #000000;
   box-sizing: border-box;
   margin: 0 20%;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
 }
 .textbox-header {
   position: absolute;
