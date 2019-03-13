@@ -1,3 +1,4 @@
+/* Containers */
 body {
   background-color: #FFF500;
   width: 100%;
@@ -12,51 +13,33 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.info {
-  width: 45%;
+.size {
+  width: 42vw;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
 }
-.title {
-display: flex;
-justify-content: center;
-width: 100%;
-height: 30px;
-background: #FFFFFF;
-font-size: 16px;
-}
-h1 {
+
+/* Text */
+p, h1, li {
   font-family: Saira;
   font-style: normal;
-  font-weight: black;
   line-height: normal;
-  font-size: 24px;
   color: #000000;
+}
+h1 {
+  font-weight: black;
+  font-size: 24px;
   margin: 0;
 }
 p {
-  font-family: Saira;
-  font-style: normal;
   font-weight: medium;
-  line-height: normal;
   font-size: 24px;
   text-align: center;
-  color: #000000;
   margin-bottom: 20px;
 }
-/* p + p, p + form, textbox-content p {
-  margin: 0 0 20px 0;
-} */
-p2 {
-  font-family: Saira;
+.p2  {
   font-weight: bold;
-  line-height: normal;
   font-size: 18px;
   text-align: center;
-  color: #000000;
   margin: 0;
 }
 .p3 {
@@ -65,21 +48,59 @@ p2 {
   text-align: left;
 }
 a {
-  background:
-     linear-gradient(
-       to bottom, var(#000000) 0%,
-       var(#000000) 100%
-     );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-  color: #000;
   text-decoration: none;
-  transition: background-size .2s;
 }
 
-a:hover {
-  background-size: 4px 50px;
+
+/* Inputs */
+form {
+  width: 42vw;
+}
+form p {
+  display: inline;
+  font-family: Saira;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  margin: 0 20px 0 0;
+  line-height: normal;
+  color: #000000;
+}
+input {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  font-family: Saira;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  color: #000000;
+  margin: 20px 0 0 0;
+}
+input[type=text] {
+  width: 70%;
+  height: 40px;
+  padding: 0 10px;
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  border-radius: 14px;
+  width: auto;
+  height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background: #000;
+  color: #fff;
+}
+input[type=submit] + input[type=submit] {
+  margin-right: 10px;
 }
 button {
   background: #FFFFFF;
@@ -104,7 +125,25 @@ button p {
 button:hover p {
   color: #fff;
 }
-@-webkit-keyframes hvr-wobble-vertical {
+
+
+/* Hovers */
+.rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.rotate:hover, .rotate:focus, .rotate:active {
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+@-webkit-keyframes wobble-vertical {
   16.65% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
@@ -130,7 +169,7 @@ button:hover p {
     transform: translateY(0);
   }
 }
-@keyframes hvr-wobble-vertical {
+@keyframes wobble-vertical {
   16.65% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
@@ -156,16 +195,16 @@ button:hover p {
     transform: translateY(0);
   }
 }
-.hvr-wobble-vertical {
+.wobble-vertical {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
-  -webkit-animation-name: hvr-wobble-vertical;
-  animation-name: hvr-wobble-vertical;
+.wobble-vertical:hover, .wobble-vertical:focus, .wobble-vertical:active {
+  -webkit-animation-name: wobble-vertical;
+  animation-name: wobble-vertical;
   -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
   -webkit-animation-timing-function: ease-in-out;
@@ -173,8 +212,7 @@ button:hover p {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
-
-@-webkit-keyframes hvr-wobble-horizontal {
+@-webkit-keyframes wobble-horizontal {
   16.65% {
     -webkit-transform: translateX(8px);
     transform: translateX(8px);
@@ -200,7 +238,7 @@ button:hover p {
     transform: translateX(0);
   }
 }
-@keyframes hvr-wobble-horizontal {
+@keyframes wobble-horizontal {
   16.65% {
     -webkit-transform: translateX(8px);
     transform: translateX(8px);
@@ -226,16 +264,16 @@ button:hover p {
     transform: translateX(0);
   }
 }
-.hvr-wobble-horizontal {
+.wobble-horizontal {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
-  -webkit-animation-name: hvr-wobble-horizontal;
-  animation-name: hvr-wobble-horizontal;
+.wobble-horizontal:hover, .wobble-horizontal:focus, .wobble-horizontal:active {
+  -webkit-animation-name: wobble-horizontal;
+  animation-name: wobble-horizontal;
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   -webkit-animation-timing-function: ease-in-out;
@@ -244,93 +282,85 @@ button:hover p {
   animation-iteration-count: 1;
 }
 
-input[type=text] {
-  width: 400px;
-  height: 40px;
-  padding: 0 10px;
-  background: #FFFFFF;
-  border: 3px solid #000000;
-  box-sizing: border-box;
-}
-form p2 {
-  margin-right: 20px;
-}
-input {
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  font-family: Saira;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 18px;
-  color: #000000;
-  margin: 20px 0 0 0;
-}
-input[type=submit] {
-  background: #FFFFFF;
-  border: 3px solid #000000;
-  box-sizing: border-box;
-  border-radius: 14px;
-  width: auto;
-  height: 40px;
-  padding: 0 20px;
-  cursor: pointer;
-}
-input[type=submit]:hover {
-  background: #000;
-  color: #fff;
-}
-input[type=submit] + input[type=submit] {
-  margin-right: 10px;
-}
-
+/* 01 Code of Conduct */
 .textbox {
   align-self: center;
   flex-direction: column;
-  width: 100%;
-  height: 90%;
+  width: 60vw;
+  height: 90vh;
   overflow: scroll;
   background: #FFFFFF;
   border: 2px solid #000000;
   box-sizing: border-box;
-  margin: 0 20%;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
 .textbox-header {
-  position: absolute;
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   background: #fff;
+  width: auto;
   height: 30px;
   padding: 5px 6px 0 6px;
   border-bottom: 2px solid #000000;
 }
+.textbox-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 2;
+  margin: 0 10px;
+}
 .textbox-content {
-  margin: 50px 40px 40px 40px;
-  overflow: hidden;
+  margin: 20px 40px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .textbox-content h1 {
-  font-family: Saira;
-  font-style: normal;
-  font-weight: black;
-  line-height: normal;
-  font-size: 24px;
-  color: #000000;
   margin: 12px 0;
 }
 .textbox-content p, li {
-  font-family: Saira;
-  font-weight: normal;
-  line-height: normal;
   font-size: 18px;
   text-align: left;
-  color: #000000;
 }
 svg {
   width: 100%;
   height: 40px;
   display: inline;
+  flex-grow: 1;
+}
+
+/* Media queries */
+@media only screen and (max-width: 800px) {
+  .center {
+    align-self: flex-start;
+    margin: 5vh 0;
+  }
+  .size {
+    width: 90vw;
+  }
+  form {
+    width: 90vw;
+  }
+  form p {
+    margin: 0;
+  }
+  input {
+    margin: 5px 0 10px 0;
+  }
+  input[type=text] {
+    width: 100%;
+  }
+  .textbox {
+    width: 90vw;
+    height: 95vh;
+  }
+  .textbox-content {
+    margin: 0px 20px 40px;
+  }
+  svg {
+    width: 10%;
+  }
 }
