@@ -1,0 +1,16 @@
+{
+  "name": "incomple.to",
+  "description": "incomple.to website",
+  "version": "0.0.1",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html"
+  },
+  "dependencies": {
+    "zdog": "metafizzy/zdog#master"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
