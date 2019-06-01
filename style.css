@@ -13,8 +13,7 @@ section {
 }
 
 section h1 {
-  width: 180px;
-  border-bottom: 2px solid;
+  font-weight: bold;
 }
 
 section h1,
@@ -23,7 +22,6 @@ section p {
   color: #fff;
   font-size: 1.72em;
   line-height: 1.6em;
-  font-weight: normal;
 }
 
 canvas {

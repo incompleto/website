@@ -1,9 +1,5 @@
-// cup.js
-
 const TAU = Zdog.TAU;
-
 const white = "#fff";
-
 let isSpinning = true;
 
 let illo = new Zdog.Illustration({
