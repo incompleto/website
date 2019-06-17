@@ -1,7 +1,18 @@
+/* style.css */
+
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600&display=swap");
+
 html,
 body {
   height: 100%;
   margin: 0;
+  font-family: "IBM Plex Sans", -apple-system, sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 4px solid #fff;
 }
 
 section {
@@ -13,12 +24,11 @@ section {
 }
 
 section h1 {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 2em;
 }
 
-section h1,
 section p {
-  font-family: -apple-system, sans-serif;
   color: #fff;
   font-size: 1.72em;
   line-height: 1.6em;
