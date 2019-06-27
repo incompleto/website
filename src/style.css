@@ -36,8 +36,7 @@ section p {
 }
 
 canvas {
-  margin-left: -100px;
-  margin-right: 50px;
+  left: -100%;
   cursor: move;
   height: 100%;
   width: 400px;
